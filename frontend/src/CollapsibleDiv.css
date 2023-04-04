@@ -1,0 +1,46 @@
+.asset {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.asset-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.asset-header h2 {
+  margin: 0;
+}
+
+.expand-button {
+  width: 20px;
+  height: 20px;
+  background-image: url("path/to/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.expand-button.expanded {
+  transform: rotate(180deg);
+}
+
+.asset-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.asset-description p {
+  margin: 0;
+}
+
+.asset-description.expanded {
+  max-height: 200px;
+  overflow-y: auto;
+}
